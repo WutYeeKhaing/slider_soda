@@ -66,3 +66,7 @@ const showSlider = (type) => {
         nextBtn.click();
     }, 5000);
 }
+const items = document.querySelectorAll('.item');
+items.forEach((item, index) => {
+    item.style.filter = `url(#squiggle-${index % 5})`; // Apply different filters cyclically
+});
